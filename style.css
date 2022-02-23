@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Style nawigacji w prawym górnym rogu strony */
+
+header {
+    flex-basis: 10%;
+}
+
+nav.topRightMenu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+}
+
+.topRightMenu ul {
+    display: flex;
+    list-style: none;
+}
+
+.topRightMenu ul li {
+    width: 22%;
+}
+
+.topRightMenu ul li:last-of-type {
+    width: 34%;
+}
+
+.topRightMenu ul li a {
+    text-align: center;
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 0 5px;
+    line-height: 40px;
+    transition: .1s;
+}
+
+.topRightMenu ul li a.gmail:hover,
+.topRightMenu ul li a.googleImages:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.topRightMenu .storeIcon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+    background-color: transparent;
+    color: rgb(121, 119, 119);
+    margin: 0 10px;
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    transition: .1s;
+}
+
+.topRightMenu .storeIcon:hover {
+    background-color: rgba(192, 186, 186, 0.459);
+}
+
+.topRightMenu .storeIcon:hover span {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(49, 49, 49);
+    color: white;
+    line-height: 15px;
+    font-size: 14px;
+    width: 300%;
+    border-radius: 5%;
+    padding: 2px;
+}
+
+.topRightMenu .googleAcc {
+    position: relative;
+    box-sizing: border-box;
+    width: 100px;
+    line-height: 40px;
+    background-color: rgb(39, 35, 243);
+    margin-right: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    transition: .1s;
+}
+
+.topRightMenu .googleAcc:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px rgb(39, 35, 243);
+    opacity: 0.95;
+}
+
+.topRightMenu span {
+    display: none;
+    transition: .1s;
+}
+
+/* style maina - centrum strony */
+
+main {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+    margin: 0 auto;
+}
+
+.logo {
+    align-self: center;
+    margin-bottom: 20px;
+    margin-top: 150px;
+
+}
+
+.searchBar {
+    display: flex;
+    height: 41px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(150, 150, 150, 0.61);
+    border-radius: 20px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    transition: .1s;
+}
+
+.searchBar:hover {
+    box-shadow: 0 0 5px rgba(150, 150, 150, 0.61);
+}
+
+.searchBar .searchIcon {
+    flex-basis: 9%;
+    color: rgba(124, 122, 122, 0.473);
+
+}
+
+.searchBar .searchInput {
+    flex-basis: 75%;
+}
+
+.searchBar .searchInput input {
+    width: 100%;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+
+
+.searchBar .keyboard {
+    position: relative;
+    flex-basis: 7%;
+    color: rgb(129, 129, 129);
+    cursor: pointer;
+
+}
+
+.searchBar .keyboard span,
+.searchBar .voice span {
+    display: none;
+    position: absolute;
+    bottom: -27px;
+    left: calc(-100px + 20.46px / 2);
+    background-color: rgb(49, 49, 49);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 22px;
+    margin-top: 7px;
+    width: 200px;
+    transition: .1s;
+}
+
+.searchBar .keyboard span.pointer,
+.searchBar .voice span.pointer {
+    display: none;
+    position: absolute;
+    bottom: -11px;
+    left: calc(50% - 5px);
+    z-index: 100;
+    background-color: rgb(49, 49, 49);
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    transition: .1s;
+}
+
+.searchBar .keyboard:hover span {
+    display: block;
+}
+
+.searchBar .voice {
+    position: relative;
+    flex-basis: 9%;
+    color: rgb(0, 153, 255);
+    cursor: pointer;
+
+}
+
+.searchBar .voice span {
+    left: calc(-65px + 52.02px / 2);
+    width: 130px;
+
+}
+
+.searchBar .voice:hover span {
+    display: block;
+}
+
+/* ----------------------------------- */
+
+.searchBtns {
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.searchBtns button {
+    align-self: center;
+    background-color: rgba(238, 238, 238, 0.3);
+    font-size: 14px;
+    line-height: 34px;
+    margin: 0 4px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.searchBtns button:hover {
+    box-shadow: 0 0 3px rgb(185, 185, 185);
+}
+
+.lang {
+    align-self: center;
+    font-size: 14px;
+}
+
+.lang a {
+    text-decoration: none;
+}
+
+
+/* ----------footer------------ */
+
+footer {
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(192, 186, 186, 0.459);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .userCountry {
+    position: relative;
+    box-sizing: border-box;
+    flex-basis: 50%;
+    background-color: rgb(236, 236, 236);
+    border-bottom: solid 1px rgb(201, 201, 201);
+}
+
+footer .userCountry p {
+    position: absolute;
+    margin-left: 25px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgb(49, 49, 49)
+}
+
+footer .bottomMenu {
+    position: relative;
+    flex-basis: 50%;
+    display: flex;
+    background-color: rgb(236, 236, 236);
+}
+
+.bottomMenu .bottomLeftMenu {
+    position: absolute;
+    flex-basis: 30%;
+    margin-left: 30px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.bottomMenu .bottomLeftMenu ul {
+    display: flex;
+}
+
+.bottomMenu .bottomLeftMenu ul li {
+    padding: 5px;
+}
+
+.bottomMenu p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-basis: 40%;
+    text-align: center;
+}
+
+.bottomMenu p i {
+    color: green;
+    font-size: 20px;
+}
+
+.bottomMenu .bottomRightMenu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    flex-basis: 30%;
+}
+
+.bottomMenu .bottomRightMenu ul {
+    flex-basis: calc(100% / 3);
+    display: flex;
+    margin-right: 30px;
+}
+
+.bottomMenu .bottomRightMenu ul li {
+    padding: 5px;
+}
